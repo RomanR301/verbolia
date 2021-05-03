@@ -1,0 +1,816 @@
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin defaultIcon($size) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: $size;
+}
+
+$whiteColor: #ffffff;
+$defaultText: #232323;
+$darkGreyColor: #3c3a3d;
+$goldenColor: #ba9856;
+$lightGoldenColor: #e0b662;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: $defaultText;
+  font-weight: 400;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+  background: $whiteColor;
+  color: $defaultText;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+.icon-logo-bymycar:before {
+  font-size: 32px;
+  color: $whiteColor;
+}
+
+button {
+  font-family: inherit;
+}
+.font {
+  &-light {
+    font-weight: 300;
+  }
+  &-regular {
+    font-weight: 400 !important;
+  }
+  &-medium {
+    font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+  &-black {
+    font-weight: 900;
+  }
+}
+
+.header {
+  background: #1f1f1f;
+  &-logo {
+    text-decoration: none;
+  }
+  &-cta {
+    text-decoration: none;
+    border: 1px solid $goldenColor;
+    border-radius: 100px;
+    &:hover .header-cta-button {
+      background: $lightGoldenColor;
+    }
+    &-button {
+      color: $whiteColor;
+      background: $goldenColor;
+      font-size: 8px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      & span {
+        border-radius: 100%;
+        background: $whiteColor;
+        color: $goldenColor;
+        font-size: 11px;
+      }
+    }
+    &-number {
+      color: $whiteColor;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+.menu {
+  &__link {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $whiteColor;
+      & span {
+        color: $defaultText;
+      }
+    }
+    & span {
+      font-size: 14px;
+      color: $whiteColor;
+      transition: all 0.3s ease-in-out;
+    }
+    &_user {
+      span {
+        line-height: 1;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+main {
+  & h1 {
+    font-size: 100px;
+    font-weight: 700;
+  }
+  & .page-description {
+    font-size: 14px;
+  }
+}
+.filter-more-toggle {
+  background: $goldenColor;
+  color: $whiteColor;
+  font-size: 16px;
+  border: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $lightGoldenColor;
+  }
+}
+.sort-by {
+  & p {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  & select {
+    border: none;
+    font-family: inherit;
+    border-radius: 100px;
+    outline: 0;
+    border: 1px solid #676767;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.product {
+  border-top: 1px solid #c5c5c5;
+  background: #f7f7f7;
+  &-search-result {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &-sidebar {
+    background: $whiteColor;
+    border: 1px solid #676767;
+    border-radius: 4px;
+
+  }
+  &-item {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    color: $defaultText;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &__badge {
+    &.two-badges {
+      & .badge:first-child {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    & .badge {
+
+      background: #4b4b4b;
+      color: $whiteColor;
+      font-weight: 600;
+      font-size: 11px;
+      border-radius: 10px 0 0 10px;
+      &-white {
+        background: $whiteColor;
+        color: $defaultText;
+      }
+    }
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__type {
+    font-size: 14px;
+  }
+  &__features {
+    &_list {
+      list-style: none;
+      & li {
+        font-size: 14px;
+        & span {
+          font-weight: 700;
+        }
+        &:before {
+          background: $goldenColor;
+          border-radius: 100%;
+        }
+      }
+    }
+    &_icons {
+      border-bottom: 1px solid #c3c3c3;
+      & i {
+        font-size: 20px;
+        color: #ba9856;
+      }
+      & .tooltip {
+        &-text {
+          background: $goldenColor;
+          color: $whiteColor;
+          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 6px;
+          transition: all 0.3s ease-in-out;
+          & h5 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $whiteColor;
+          }
+        }
+        &:nth-child(9) {
+          &:before {
+            color: $defaultText;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  &__characteristics {
+    list-style: none;
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+    & li {
+      font-size: 11px;
+      border-right: 1px solid #c3c3c3;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  &__price {
+    &_credit {
+      border-right: 1px solid #c3c3c3;
+      font-size: 11px;
+      & span {
+        font-size: 12px;
+        font-weight: 600;
+      }
+      & i {
+        font-size: 20px;
+      }
+    }
+    &_current {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    &_old {
+      color: #848484;
+      font-size: 11px;
+      &:before {
+        background: #848484;
+      }
+    }
+    &_discount {
+      color: $goldenColor;
+      font-weight: 700;
+      font-size: 10px;
+    }
+  }
+  &-pagination {
+    & .pagination-item {
+      font-size: 18px;
+      font-weight: 500;
+      background: transparent;
+      border: 2px solid #adadad;
+      border-radius: 4px;
+      color: $defaultText;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &.prev,
+      &.next {
+        border: none;
+        &:before,
+        &:after {
+          color: $defaultText;
+          font-size: 20px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.dots {
+        border: none;
+        pointer-events: none;
+      }
+      &:hover,
+      &.current {
+        color: $goldenColor;
+        border-color: $goldenColor;
+        &:before,
+        &:after {
+          color: $goldenColor;
+        }
+      }
+    }
+  }
+}
+
+.more-btn {
+  color: $goldenColor;
+  cursor: pointer;
+  &:before,
+  &:after {
+    background: $goldenColor;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.filter-checkbox {
+  cursor: pointer;
+  & input {
+    &:checked + label:after {
+      border: solid $whiteColor;
+      border-width: 0 2px 2px 0;
+    }
+    &:checked + label:before {
+      background: $goldenColor;
+      border-color: $goldenColor;
+    }
+  }
+  & label {
+    cursor: pointer;
+    color: $defaultText;
+    font-size: 14px;
+    & span {
+      color: $defaultText;
+      font-size: 13px;
+    }
+    &:before {
+      background-color: transparent;
+      border: 1px solid #6f6f6f;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:after {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.filter-radio {
+  input[type="radio"] {
+    &:checked {
+      + label {
+        background: #4b4b4b;
+        color: $whiteColor;
+      }
+    }
+    &:focus {
+      + label {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &[disabled="true"] {
+      + label {
+        background: #f1f1f1;
+        color: #999;
+        border-color: rgba(145, 145, 145, 0.4);
+      }
+    }
+  }
+  label {
+    border: 1px solid #676767;
+    cursor: pointer;
+  }
+}
+.filter {
+  &-result {
+    &__item {
+      font-size: 14px;
+      border: 1px solid transparent;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        border-color: #676767;
+        background: #f7f7f7;
+      }
+      & button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        &:before,
+        &:after {
+          background: $defaultText;
+        }
+      }
+    }
+  }
+  &-item {
+    border-bottom: 1px solid #676767;
+  }
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &-list {
+    &.select-list {
+      & label {
+        background: #fff;
+        border-radius: 100px;
+        border: 1px solid rgba(145, 145, 145, 0.4);
+        color: #1f1f1f;
+      }
+      & select {
+        transition: all 0.3s ease-in-out;
+        border-radius: 100px;
+        border: 1px solid rgba(145, 145, 145, 0.4);
+        color: #1f1f1f;
+        font-family: inherit;
+        outline: none;
+        cursor: pointer;
+        option {
+          color: #1f1f1f;
+        }
+      }
+    }
+  }
+}
+.additional {
+  &-text {
+    font-size: 14px;
+  }
+}
+.recommendations {
+  & h2 {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  &__link {
+    color: $goldenColor;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+    &:after {
+      color: $goldenColor;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      color: $lightGoldenColor;
+      &:after {
+        color: $lightGoldenColor;
+        transform: translate(10px, 0);
+      }
+    }
+  }
+}
+.advantages {
+  & h2 {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  &__item {
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    }
+  }
+  &__icon {
+    & i {
+      font-size: 60px;
+    }
+  }
+  &__title {
+    font-size: 14px;
+  }
+  &__text {
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+.footer {
+  background: $defaultText;
+  & .column {
+    border-right: 1px solid rgba(145, 145, 145, 0.4);
+    &:last-child,
+    &:nth-last-child(2) {
+      border: none;
+    }
+  }
+  &__logo {
+    text-decoration: none;
+  }
+  &__title {
+    color: $whiteColor;
+    font-size: 14px;
+  }
+  &__link {
+    font-weight: 700;
+    color: $whiteColor;
+    text-decoration: none;
+    font-size: 14px;
+    &:before {
+      background: $whiteColor;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &-rating {
+    & .rating-number {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  main h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .mobile-menu {
+    background: #ffff;
+    transition: all 0.3s ease-in-out;
+    &-close {
+      background: $defaultText;
+    }
+    & .menu-close {
+      color: $whiteColor;
+      background: transparent;
+      border: none;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      & i {
+        color: $whiteColor;
+        font-size: 20px;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: $defaultText;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(145, 145, 145, 0.4);
+      & .icon-chevron-right {
+        color: #6d6d6d;
+      }
+    }
+  }
+  main h1 {
+    font-size: 60px;
+  }
+  .menu {
+    background: $whiteColor;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    &__link {
+      & span {
+        color: $defaultText;
+        font-size: 8px;
+        &.font-light,
+        &.font-semibold {
+          font-weight: 400;
+        }
+      }
+      & i {
+        &:before {
+          font-size: 50px;
+        }
+      }
+      &_rdv {
+        & i:before {
+          font-size: 25px;
+        }
+      }
+      &_concession {
+        & i:before {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    & i:before {
+      font-size: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    &.open {
+      & i:before,
+      p {
+        color: $goldenColor;
+      }
+    }
+    p {
+      font-size: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .product {
+    &-sidebar {
+      transition: all 0.3s ease-in-out;
+      background: $whiteColor;
+    }
+  }
+  .toggle-filters {
+    cursor: pointer;
+    border-radius: 100px;
+    outline: 0;
+    border: 1px solid #676767;
+    text-transform: uppercase;
+    background: transparent;
+    &-close {
+      border: none;
+      text-transform: uppercase;
+      color: $whiteColor;
+      background: $goldenColor;
+      border-radius: 0;
+      transition: all 0.3s ease-in-out;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    & h1 {
+      font-size: 30px;
+    }
+    & .page-description {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+  .page-description-additional {
+    line-height: 1.4;
+  }
+  .show-more-text {
+    background: none;
+    border: none;
+    color: $goldenColor;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+    &:after {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sort-by {
+    font-size: 10px;
+  }
+  .product-search-result {
+    font-size: 10px;
+    line-height: 1;
+  }
+  .product-pagination .pagination-item {
+    font-size: 15px;
+  }
+  .recommendations h2 {
+    font-size: 22px;
+  }
+  .advantages h2 {
+    font-size: 22px;
+  }
+}
