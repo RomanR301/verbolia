@@ -14,15 +14,106 @@
 </head>
 
 <body>
- <header>
-   header
- </header>
- <main>
-   main
- </main>
- <footer>
-   footer
- </footer>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./img/main-logo.svg" alt="Verbolia logo">
+      </a>
+      <ul class="menu">
+        <li class="menu-item menu-item-has-children">
+          <a href="#" class="menu__link">Solution</a>
+          <i class="toggle-sub-menu icon icon-chevron"></i>
+          <ul class="sub-menu">
+            <li class="menu-item">
+              <a href="#" class="menu__link">For Agencies</a>
+            </li>
+            <div class="menu-item">
+              <a href="#" class="menu__link">For SEO</a>
+            </div>
+            <div class="menu-item">
+              <a href="#" class="menu__link">For SEA</a>
+            </div>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Pricing</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Blog</a>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <i class="icon icon-globe"></i>
+          <i class="toggle-sub-menu icon icon-chevron"></i>
+          <ul class="sub-menu">
+            <li class="menu-item">
+              <a href="#" class="menu__link">EN</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu__link">FR</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#" class="header-login menu__link">
+        LOG IN
+      </a>
+      <a href="#" class="header-contact btn btn-outline">
+        REQUEST A DEMO
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-screen">
+      <img class="hero-screen-background" src="./img/hero-screen-background.svg" alt="hero screen backgroun image">
+      <img src="./img/hero-screen-decor1.svg" class="hero-screen-decor1" alt="decor element">
+      <img src="./img/hero-screen-decor2.svg" class="hero-screen-decor2" alt="decor element">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="hero-screen__text">
+              <h1 class="heading-1">Scalable traffic acquisition platform for <span>ecommerce</span></h1>
+              <p>Make the most of your product listing to create <br> perfect pages for SEO and PaidSearch</p>
+              <a href="#" class="btn btn-primary">Request a demo</a>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="hero-screen__slider">
+              <div class="hero-screen__slider_before">
+                <img
+                  src="https://images.pexels.com/photos/3728078/pexels-photo-3728078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt="before" />
+              </div>
+              <div class="hero-screen__slider_after">
+                <img
+                  src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt="After" />
+              </div>
+              <div class="hero-screen__slider_resizer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients container">
+      <h4 class="clients-heading">Trusted by</h4>
+      <div class="clients-list">
+        <img src="./img/clients/clients-hema.png" alt="HEMA logo">
+        <img src="./img/clients/clients-decathlon.png" alt="DECATHLON logo">
+        <img src="./img/clients/clients-media-markt.png" alt="Media Markt logo">
+        <img src="./img/clients/clients-vdab.png" alt="VDAB logo">
+        <img src="./img/clients/clients-kazidomi.png" alt="Kazidomi logo">
+        <img src="./img/clients/clients-olx.png" alt="OLX Logo">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/main.js"></script>
 </body>

@@ -4,7 +4,24 @@ let front = {
   navbar: $('.mobile-menu'),
   body: $('body'),
   init: function () {
-      this.events();      
+      this.events();   
+      
+      $(document).on('click', '.toggle-sub-menu', function(e) {
+        e.preventDefault();
+        if ($(this).parent().hasClass("show")) {
+          $(this).parent().removeClass("show");
+      } else {
+        $('.menu-item-has-child').removeClass('show');
+          $(this).parent().addClass('show');
+        }
+      });
+      
+      $('html').click(function(e) {
+      var a = e.target;
+      if ($(a).parents('.menu-item-has-child').length === 0) {
+        $('.menu-item-has-child').removeClass('show'); //hide menu item
+      }
+      });
   },
   toggleNav: function () {
     if (!this.hamburger.hasClass('open')) {
@@ -25,63 +42,99 @@ let front = {
       $(document).on('click', '.menu-close', function () {
           self.toggleNav();
       });
-
-      $(".more-btn").on("click", function(e) {
-        let content = $(this).prev('.more-content');
-        content.toggleClass('active');
-        if (content.hasClass('active')) {
-          content.slideDown();
-          $(this).text('Voir moins').toggleClass('active');
-        } else {
-          content.slideUp();
-          $(this).text('Voir plus').toggleClass('active');
-        }
-      });
-      $(".show-more-text").on("click", function(e) {
-        let content = $(this).prev('.page-description-additional');
-        content.toggleClass('active');
-        if (content.hasClass('active')) {
-          content.slideToggle();
-          $(this).text('Lire moins').toggleClass('active');
-        } else {
-          content.slideToggle();
-          $(this).text('Lire la suite').toggleClass('active');
-        }
-      });
-
-      $(".filter-more-toggle").on("click", function(e) {
-        e.preventDefault();
-        let content = $(this).prev('.filter-more-content');
-        content.toggleClass('active');
-        if (content.hasClass('active')) {
-          $(this).prev('.filter-more-content').slideDown();
-          $(this).text('moins de filtres').toggleClass('active');
-        } else {
-          $(this).prev('.filter-more-content').slideUp();
-          $(this).text('Voir tous les filtres').toggleClass('active');
-        }
-      });
-
-      $(document).on('click', '.toggle-filters', function (e) {
-        e.preventDefault()
-        $('.product-sidebar').toggleClass('active');
-      });
-
-      $(document).on('click', '.filter-toggle', function (e) {
-        e.preventDefault()
-        let item = $(this);
-        let list = $(this).next('.filter-list');
-        if (item.hasClass('active')) {
-            item.removeClass('active');
-            list.slideToggle();
-        } else {
-            item.addClass('active');
-            list.slideToggle();
-        }
-      });
   }
 };
+
 
 jQuery(function () {
   front.init();
 });
+
+const slider = document.querySelector('.hero-screen__slider');
+const before = document.querySelector('.hero-screen__slider_before');
+const beforeImage = before.querySelector('.hero-screen__slider_before img');
+const resizer = document.querySelector('.hero-screen__slider_resizer');
+
+let active = false;
+
+//Sort overflow out for Overlay Image
+document.addEventListener("DOMContentLoaded", function() {
+  let width = slider.offsetWidth;
+  beforeImage.style.width = width + 'px';
+});
+
+//Adjust width of image on resize 
+window.addEventListener('resize', function() {
+  let width = slider.offsetWidth;
+  beforeImage.style.width = width + 'px';
+})
+
+resizer.addEventListener('mousedown',function(){
+  active = true;
+ resizer.classList.add('resize');
+
+});
+
+document.body.addEventListener('mouseup',function(){
+  active = false;
+ resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mouseleave', function() {
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mousemove',function(e){
+  if (!active) return;
+  let x = e.pageX;
+  x -= slider.getBoundingClientRect().left;
+  slideIt(x);
+  pauseEvent(e);
+});
+
+resizer.addEventListener('touchstart',function(){
+  active = true;
+  resizer.classList.add('resize');
+});
+
+document.body.addEventListener('touchend',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('touchcancel',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+//calculation for dragging on touch devices
+document.body.addEventListener('touchmove',function(e){
+  if (!active) return;
+  let x;
+  
+  let i;
+  for (i=0; i < e.changedTouches.length; i++) {
+  x = e.changedTouches[i].pageX; 
+  }
+  
+  x -= slider.getBoundingClientRect().left;
+  slideIt(x);
+  pauseEvent(e);
+});
+
+function slideIt(x){
+    let transform = Math.max(0,(Math.min(x,slider.offsetWidth)));
+    before.style.width = transform+"px";
+    resizer.style.left = transform-0+"px";
+}
+
+//stop divs being selected.
+function pauseEvent(e){
+    if(e.stopPropagation) e.stopPropagation();
+    if(e.preventDefault) e.preventDefault();
+    e.cancelBubble=true;
+    e.returnValue=false;
+    return false;
+}
+
