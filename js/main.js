@@ -4,6 +4,13 @@ let front = {
   navbar: $('.mobile-menu'),
   body: $('body'),
   init: function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 40) {
+        $('header').addClass("scroll-header");
+      } else {
+        $('header').removeClass("scroll-header");
+      }
+    });
       this.events();   
       
       $(document).on('click', '.toggle-sub-menu', function(e) {
