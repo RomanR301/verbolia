@@ -19,32 +19,34 @@
       <a href="index.html" class="header-logo">
         <img src="./img/main-logo.svg" alt="Verbolia logo">
       </a>
-      <ul class="menu">
-        <li class="menu-item menu-item-has-children">
-          <a href="#" class="menu__link">Solution</a>
-          <i class="toggle-sub-menu icon icon-chevron"></i>
-          <ul class="sub-menu">
-            <li class="menu-item">
-              <a href="#" class="menu__link">For Agencies</a>
-            </li>
-            <div class="menu-item">
-              <a href="#" class="menu__link">For SEO</a>
-            </div>
-            <div class="menu-item">
-              <a href="#" class="menu__link">For SEA</a>
-            </div>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu__link">Pricing</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu__link">About Us</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu__link">Blog</a>
-        </li>
-        <li class="menu-item menu-item-has-children">
+      <div class="navbar">
+        <ul class="menu">
+          <li class="menu-item menu-item-has-children">
+            <a href="#" class="menu__link">Solution</a>
+            <i class="toggle-sub-menu icon icon-chevron"></i>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#" class="menu__link">For Agencies</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu__link">For SEO</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu__link">For SEA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Blog</a>
+          </li>
+        </ul>
+        <div class="menu-item menu-item-has-children header-lang">
           <i class="icon icon-globe"></i>
           <i class="toggle-sub-menu icon icon-chevron"></i>
           <ul class="sub-menu">
@@ -55,44 +57,47 @@
               <a href="#" class="menu__link">FR</a>
             </li>
           </ul>
-        </li>
-      </ul>
-      <a href="#" class="header-login menu__link">
-        LOG IN
-      </a>
-      <a href="#" class="header-contact btn btn-outline">
-        REQUEST A DEMO
-      </a>
+        </div>
+        <a href="#" class="header-login menu__link">
+          LOG IN
+        </a>
+        <a href="#" class="header-contact btn btn-outline">
+          REQUEST A DEMO
+        </a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
-
   <main>
     <section class="hero-screen">
       <img src="./img/hero-screen-background.svg" class="hero-screen-background" alt="hero screen background image">
+      <!-- <img src="./img/hero-screen-background-mobile.svg" class="hero-screen-background-mobile" alt="hero screen background image"> -->
       <img src="./img/hero-screen-decor1.svg" class="hero-screen-decor1" alt="decor element">
       <img src="./img/hero-screen-decor2.svg" class="hero-screen-decor2" alt="decor element">
       <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="hero-screen__text">
-              <h1 class="heading-1">Scalable traffic acquisition platform for <span>ecommerce</span></h1>
-              <p class="heading-5">Make the most of your product listing to create <br> perfect pages for SEO and
-                PaidSearch</p>
-              <a href="#" class="btn btn-primary">Request a demo</a>
+        <div class="hero-screen__text">
+          <h1 class="heading-1">Scalable traffic acquisition platform for <span>ecommerce</span></h1>
+          <p class="heading-5">Make the most of your product listing to create <br> perfect pages for SEO and
+            PaidSearch</p>
+          <a href="#" class="btn btn-primary">Request a demo</a>
+        </div>
+        <div class="hero-screen__slider_container">
+          <div class="hero-screen__slider">
+            <div class="hero-screen__slider_before">
+              <img src="./img/hero-screen__slider_first.jpeg" alt="first image description" />
             </div>
-          </div>
-          <div class="col-md-7">
-            <div class="hero-screen__slider">
-              <div class="hero-screen__slider_before">
-                <img src="./img/hero-screen__slider_first.jpeg" alt="first image description" />
-              </div>
-              <div class="hero-screen__slider_after">
-                <img src="./img/hero-screen__slider_second.jpeg" alt="second image description" />
-              </div>
-              <div class="hero-screen__slider_resizer"></div>
+            <div class="hero-screen__slider_after">
+              <img src="./img/hero-screen__slider_second.jpeg" alt="second image description" />
             </div>
+            <div class="hero-screen__slider_resizer"></div>
           </div>
         </div>
+
       </div>
     </section>
     <section class="clients container">
@@ -111,48 +116,45 @@
       <p class="heading-5">
         Maximize Verbolia experiance - choose your business profile
       </p>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="home-about-item">
-            <div class="home-about__icon">
-              <img src="./img/agency-icon.svg" alt="Verbolia agency icon">
-            </div>
-            <h3 class="home-about__title heading-3">Are you an <strong>AGENCY?</strong></h3>
-            <ul>
-              <li>Provide top quality pages to your customers</li>
-              <li>Focus on keyword strategy - Verbolia takes care of the rest</li>
-              <li>More traffic on your customers’ webshops</li>
-              <li>Increase the ROI of your performance campaigns</li>
-            </ul>
+      <div class="home-about-list">
+        <div class="home-about-item">
+          <div class="home-about__icon">
+            <img src="./img/agency-icon.svg" alt="Verbolia agency icon">
           </div>
+          <h3 class="home-about__title heading-3">Are you an <strong>AGENCY?</strong></h3>
+          <ul>
+            <li>Provide top quality pages to your customers</li>
+            <li>Focus on keyword strategy - Verbolia takes care of the rest</li>
+            <li>More traffic on your customers’ webshops</li>
+            <li>Increase the ROI of your performance campaigns</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Request a demo</a>
         </div>
-        <div class="col-md-4">
-          <div class="home-about-item">
-            <div class="home-about__icon">
-              <img src="./img/seo-icon.svg" alt="Verbolia Seo expert icon">
-            </div>
-            <h3 class="home-about__title heading-3">Are you an <strong>seo expert?</strong></h3>
-            <ul>
-              <li>Ecommerce pages with pagespeed > 85</li>
-              <li>Create optimized pages for all your SEO keywords</li>
-              <li>No need for extra copywriting</li>
-              <li>Handle a platform migration without SEO impact</li>
-            </ul>
+        <div class="home-about-item">
+          <div class="home-about__icon">
+            <img src="./img/seo-icon.svg" alt="Verbolia Seo expert icon">
           </div>
+          <h3 class="home-about__title heading-3">Are you an <strong>seo expert?</strong></h3>
+          <ul>
+            <li>Ecommerce pages with pagespeed > 85</li>
+            <li>Create optimized pages for all your SEO keywords</li>
+            <li>No need for extra copywriting</li>
+            <li>Handle a platform migration without SEO impact</li>
+          </ul>
+           <a href="#" class="btn btn-outline">Request a demo</a>
         </div>
-        <div class="col-md-4">
-          <div class="home-about-item">
-            <div class="home-about__icon">
-              <img src="./img/sea-icon.svg" alt="Verbolia Sea expert icon">
-            </div>
-            <h3 class="home-about__title heading-3">Are you an <strong>Sea expert?</strong></h3>
-            <ul>
-              <li>10/10 Quality Score landing pages</li>
-              <li>Create hyper specific pages for all your keywords</li>
-              <li>Increase the ROI of your paid campaigns</li>
-              <li>Focus on keyword strategy - Verbolia handles the creation of your pages</li>
-            </ul>
+        <div class="home-about-item">
+          <div class="home-about__icon">
+            <img src="./img/sea-icon.svg" alt="Verbolia Sea expert icon">
           </div>
+          <h3 class="home-about__title heading-3">Are you an <strong>Sea expert?</strong></h3>
+          <ul>
+            <li>10/10 Quality Score landing pages</li>
+            <li>Create hyper specific pages for all your keywords</li>
+            <li>Increase the ROI of your paid campaigns</li>
+            <li>Focus on keyword strategy - Verbolia handles the creation of your pages</li>
+          </ul>
+           <a href="#" class="btn btn-outline">Request a demo</a>
         </div>
       </div>
     </section>
@@ -224,82 +226,73 @@
       <img src="./img/how-it-works-background.svg" class="how-it-works-background" alt="how in works background image">
       <img src="./img/how-it-works-decor1.svg" class="how-it-works-decor1" alt="decor element">
       <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <div class="how-it-works__image">
-              <img src="./img/verbolia-dashboard.jpg" alt="How it works, dashboard image">
-            </div>
-          </div>
-          <div class="col-md-5">
-            <h2 class="heading-2">See Verbolia in <span>action</span></h2>
-            <p class="heading-5">
-              Use our tool and discover the full potential of our platform for your e-commerce website.
-            </p>
-            <a href="#" class="btn btn-primary">Request demo access</a>
-          </div>
+        <div class="how-it-works__image">
+          <img src="./img/verbolia-dashboard.jpg" alt="How it works, dashboard image">
+        </div>
+        <div class="how-it-works__content">
+          <h2 class="heading-2">See Verbolia in <span>action</span></h2>
+          <p class="heading-5">
+            Use our tool and discover the full potential of our platform for your e-commerce website.
+          </p>
+          <a href="#" class="btn btn-primary">Request demo access</a>
         </div>
       </div>
     </section>
     <section class="blog container">
       <h2 class="heading-2"><span>Latest</span> blog articles</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <a class="blog-item" href="#">
-            <div class="blog__main">
-              <div class="blog__image">
-                <img src="./img/blog-image1.jpg" alt="How to Build Internal Linking for Large Ecommerce">
-              </div>
-              <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
-              <div class="blog__description">
-                <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
-                  backlinks.
-                  Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
-              </div>
+      <div class="blog-list">
+        <a class="blog-item" href="#">
+          <div class="blog__main">
+            <div class="blog__image">
+              <img src="./img/blog-image1.jpg" alt="How to Build Internal Linking for Large Ecommerce">
             </div>
-            <div class="blog-item__additional">
-              <div class="blog__more">READ MORE</div>
-              <div class="blog__date">Apr 26, 2021</div>
+            <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
+            <div class="blog__description">
+              <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
+                backlinks.
+                Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a class="blog-item" href="#">
-            <div class="blog__main">
-              <div class="blog__image">
-                <img src="./img/blog-image2.jpg" alt="How to Build Internal Linking for Large Ecommerce">
-              </div>
-              <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
-              <div class="blog__description">
-                <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
-                  backlinks.
-                  Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
-              </div>
+          </div>
+          <div class="blog-item__additional">
+            <div class="blog__more">READ MORE</div>
+            <div class="blog__date">Apr 26, 2021</div>
+          </div>
+        </a>
+        <a class="blog-item" href="#">
+          <div class="blog__main">
+            <div class="blog__image">
+              <img src="./img/blog-image2.jpg" alt="How to Build Internal Linking for Large Ecommerce">
             </div>
-            <div class="blog-item__additional">
-              <div class="blog__more">READ MORE</div>
-              <div class="blog__date">Apr 26, 2021</div>
+            <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
+            <div class="blog__description">
+              <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
+                backlinks.
+                Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a class="blog-item" href="#">
-            <div class="blog__main">
-              <div class="blog__image">
-                <img src="./img/blog-image3.jpg" alt="How to Build Internal Linking for Large Ecommerce">
-              </div>
-              <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
-              <div class="blog__description">
-                <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
-                  backlinks.
-                  Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
-              </div>
+          </div>
+          <div class="blog-item__additional">
+            <div class="blog__more">READ MORE</div>
+            <div class="blog__date">Apr 26, 2021</div>
+          </div>
+        </a>
+        <a class="blog-item" href="#">
+          <div class="blog__main">
+            <div class="blog__image">
+              <img src="./img/blog-image3.jpg" alt="How to Build Internal Linking for Large Ecommerce">
             </div>
-            <div class="blog-item__additional">
-              <div class="blog__more">READ MORE</div>
-              <div class="blog__date">Apr 26, 2021</div>
+            <h4 class="heading-4">How to Build Internal Linking for Large Ecommerce</h4>
+            <div class="blog__description">
+              <p>When the average entrepreneur hears “SEO,” they likely think of keyword-rich blog posts and
+                backlinks.
+                Keywords are a vital component to any SEO strategy, sure. Backlinks from authoritative sites help</p>
             </div>
-          </a>
-        </div>
+          </div>
+          <div class="blog-item__additional">
+            <div class="blog__more">READ MORE</div>
+            <div class="blog__date">Apr 26, 2021</div>
+          </div>
+        </a>
+      </div>
       </div>
     </section>
   </main>

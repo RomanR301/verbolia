@@ -1,7 +1,7 @@
 let front = {
   hamburger: $('.hamburger'),
   header: $('.header'),
-  navbar: $('.mobile-menu'),
+  navbar: $('.navbar'),
   body: $('body'),
   init: function () {
     $(window).scroll(function () {
@@ -59,7 +59,7 @@ jQuery(function () {
 
 const slider = document.querySelector('.hero-screen__slider');
 const before = document.querySelector('.hero-screen__slider_before');
-const beforeImage = before.querySelector('.hero-screen__slider_before img');
+const beforeImage = document.querySelector('.hero-screen__slider_before img');
 const resizer = document.querySelector('.hero-screen__slider_resizer');
 
 let active = false;
