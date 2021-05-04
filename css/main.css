@@ -733,6 +733,7 @@ strong {
   position: absolute;
   right: 0;
   top: 20%;
+  z-index: -1;
 }
 
 .how-it-works .container {
@@ -1302,12 +1303,47 @@ strong {
     margin: 30px auto 0 auto;
     text-align: center;
   }
+  .technologies {
+    flex-direction: column;
+  }
+  .technologies-heading {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .technologies-list {
+    max-width: 100%;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .technologies__item {
+    width: 49% !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .technologies__item img {
+    width: 100%;
+  }
+  .how-it-works {
+    height: auto;
+    padding: 100px 0;
+    align-items: flex-start;
+  }
+  .how-it-works .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .blog-list {
     display: flex;
     flex-direction: column;
   }
   .blog__item {
     width: 100%;
+  }
+  .footer .container {
+    flex-direction: column;
   }
 }
 
@@ -1320,6 +1356,9 @@ strong {
   }
   .hero-screen:before {
     content: '';
+  }
+  .technologies__item {
+    width: 48% !important;
   }
 }
 
@@ -1344,7 +1383,10 @@ strong {
     border: 6px solid #e37d38;
   }
   .home-about-item .btn {
-    width: 100%;
+    width: calc(100% - 66px);
+  }
+  .header-contact {
+    width: calc(100% - 66px);
   }
 }
 /*# sourceMappingURL=main.css.map */
