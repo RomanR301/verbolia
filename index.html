@@ -111,17 +111,18 @@
           </div>
         </div> -->
         <div class="hero-screen__slider_container">
-          <figure class="cd-image-container">
-            <img src="./img/hero-screen__slider_first.jpeg" alt="Original Image">
-            <span class="cd-image-label" data-type="original"></span>
-
-            <div class="cd-resize-img">
-              <img src="./img/hero-screen__slider_second.jpeg" alt="Modified Image">
-              <span class="cd-image-label" data-type="modified"></span>
+          <div class="comparison-slider-wrapper">
+            <!-- Comparison Slider - this div contain the slider with the individual images captions -->
+            <div class="comparison-slider">
+              <img src="./img/hero-screen__slider_first.jpeg" alt="before" />
+              <!-- Div containing the image layed out on top from the left -->
+              <div class="resize">
+                <img src="./img/hero-screen__slider_second.jpeg" alt="After" />
+              </div>
+              <!-- Divider where user will interact with the slider -->
+              <div class="divider"></div>
             </div>
-
-            <span class="cd-handle"></span>
-          </figure>
+          </div>
         </div>
       </div>
     </section>
