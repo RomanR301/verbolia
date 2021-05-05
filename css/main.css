@@ -1405,6 +1405,9 @@ strong {
     width: 40%;
     margin-bottom: 0;
   }
+  .footer-menu-column .menu__link {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 767px) {
