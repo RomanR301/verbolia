@@ -39,9 +39,10 @@
           <li class="menu-item">
             <a href="#" class="menu__link">Pricing</a>
           </li>
-          <li class="menu-item">
+          <!-- <li class="menu-item">
             <a href="#" class="menu__link">About Us</a>
-          </li>
+          </li> -->
+          <!-- Hiding about us, but there will be an about us page later -->
           <li class="menu-item">
             <a href="#" class="menu__link">Blog</a>
           </li>
@@ -61,7 +62,7 @@
         <a href="#" class="header-login menu__link">
           LOG IN
         </a>
-        <a href="#" class="header-contact btn btn-outline">
+        <a href="#" class="header-contact btn btn-primary">
           REQUEST A DEMO
         </a>
       </div>
@@ -87,39 +88,13 @@
             PaidSearch</p>
           <a href="#" class="btn btn-primary">Request a demo</a>
         </div>
-        <!-- <div class="hero-screen__slider_container">
-          <div class="hero-screen__slider">
-            <div class="hero-screen__slider_before">
-              <img src="./img/hero-screen__slider_first.jpeg" alt="first image description" />
-            </div>
-            <div class="hero-screen__slider_after">
-              <img src="./img/hero-screen__slider_second.jpeg" alt="second image description" />
-            </div>
-            <div class="hero-screen__slider_resizer"></div>
-          </div>
-        </div> -->
-        <!-- <div class="hero-screen__slider_container">
-          <div id="before-after-slider">
-            <div id="before-image">
-              <img src="./img/hero-screen__slider_first.jpeg" alt="before" />
-            </div>
-
-            <div id="after-image">
-              <img src="./img/hero-screen__slider_second.jpeg" alt="After" />
-            </div>
-            <div id="resizer"></div>
-          </div>
-        </div> -->
         <div class="hero-screen__slider_container">
           <div class="comparison-slider-wrapper">
-            <!-- Comparison Slider - this div contain the slider with the individual images captions -->
             <div class="comparison-slider">
               <img src="./img/hero-screen__slider_first.jpeg" alt="before" />
-              <!-- Div containing the image layed out on top from the left -->
               <div class="resize">
                 <img src="./img/hero-screen__slider_second.jpeg" alt="After" />
               </div>
-              <!-- Divider where user will interact with the slider -->
               <div class="divider"></div>
             </div>
           </div>
@@ -129,7 +104,7 @@
     <section class="clients container">
       <h4 class="clients-heading">Trusted by</h4>
       <div class="clients-list">
-        <img src="./img/clients/clients-hema.png" alt="HEMA logo">
+        <img class="small-logo" src="./img/clients/clients-hema.png" alt="HEMA logo">
         <img src="./img/clients/clients-decathlon.png" alt="DECATHLON logo">
         <img src="./img/clients/clients-media-markt.png" alt="Media Markt logo">
         <img src="./img/clients/clients-vdab.png" alt="VDAB logo">
@@ -138,12 +113,8 @@
       </div>
     </section>
     <section class="home-about container">
-      <h2 class="heading-2">Who are <span>you?</span></h2>
-      <p class="heading-5">
-        Maximize Verbolia experiance - choose your business profile
-      </p>
       <div class="home-about-list">
-        <div class="home-about-item">
+        <a href="#" class="home-about-item">
           <div class="home-about__icon">
             <img src="./img/agency-icon.svg" alt="Verbolia agency icon">
           </div>
@@ -154,9 +125,11 @@
             <li>More traffic on your customers’ webshops</li>
             <li>Increase the ROI of your performance campaigns</li>
           </ul>
-          <a href="#" class="btn btn-outline">Request a demo</a>
-        </div>
-        <div class="home-about-item">
+          <div class="learn-more">
+            <button class="btn btn-outline">Learn more</button>
+          </div>
+        </a>
+        <a href="#" class="home-about-item">
           <div class="home-about__icon">
             <img src="./img/seo-icon.svg" alt="Verbolia Seo expert icon">
           </div>
@@ -167,9 +140,11 @@
             <li>No need for extra copywriting</li>
             <li>Handle a platform migration without SEO impact</li>
           </ul>
-          <a href="#" class="btn btn-outline">Request a demo</a>
-        </div>
-        <div class="home-about-item">
+          <div class="learn-more">
+            <button class="btn btn-outline">Learn more</button>
+          </div>
+        </a>
+        <a href="#" class="home-about-item">
           <div class="home-about__icon">
             <img src="./img/sea-icon.svg" alt="Verbolia Sea expert icon">
           </div>
@@ -180,8 +155,10 @@
             <li>Increase the ROI of your paid campaigns</li>
             <li>Focus on keyword strategy - Verbolia handles the creation of your pages</li>
           </ul>
-          <a href="#" class="btn btn-outline">Request a demo</a>
-        </div>
+          <div class="learn-more">
+            <button class="btn btn-outline">Learn more</button>
+          </div>
+        </a>
       </div>
     </section>
     <section class="technologies container">
