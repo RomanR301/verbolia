@@ -720,6 +720,10 @@ strong {
   z-index: -1;
 }
 
+.how-it-works-decor3 {
+  display: none;
+}
+
 .how-it-works .container {
   height: 100%;
   display: -ms-grid;
@@ -1492,6 +1496,9 @@ strong {
   .how-it-works {
     padding: 100px 0 110px 0;
   }
+  .how-it-works .heading-2 {
+    margin-bottom: 24px;
+  }
   .how-it-works-background {
     -o-object-position: left;
        object-position: left;
@@ -1563,6 +1570,19 @@ strong {
   .clients {
     margin-top: -40px;
   }
+  .how-it-works-decor3 {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    opacity: .7;
+  }
+  .how-it-works .heading-5 {
+    margin-bottom: 24px;
+  }
+  .how-it-works .btn {
+    width: 100%;
+  }
 }
 
 .comparison-slider-wrapper {
@@ -1627,6 +1647,7 @@ strong {
   border-radius: 100%;
   background: #fff;
   transition: all .3s ease-in-out;
+  box-sizing: unset;
 }
 
 .comparison-slider-wrapper .comparison-slider .divider.draggable:before {

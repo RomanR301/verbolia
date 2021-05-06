@@ -645,6 +645,9 @@ strong {
     top: 20%;
     z-index: -1;
   }
+  &-decor3 {
+    display: none;
+  }
   & .container {
     height: 100%;
     display: grid;
@@ -1377,6 +1380,9 @@ strong {
   }
   .how-it-works {
     padding: 100px 0 110px 0;
+    & .heading-2 {
+      margin-bottom: 24px;
+    }
     &-background {
       object-position: left;
     }
@@ -1398,12 +1404,6 @@ strong {
   .header-contact {
     width: 100%;
   }
-  // .how-it-works {
-  //   & .heading-2 {
-  //     margin-top: -50px;
-  //     margin-bottom: 50px;
-  //   }
-  // }
 }
 
 @media (max-width: 400px) {
@@ -1452,6 +1452,21 @@ strong {
   }
   .clients {
     margin-top: -40px;
+  }
+  .how-it-works {
+    &-decor3 {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 90px;
+      opacity: .7;
+    }
+    & .heading-5 {
+      margin-bottom: 24px;
+    }
+    & .btn {
+      width: 100%;
+    }
   }
 }
 
@@ -1506,6 +1521,7 @@ strong {
         border-radius: 100%;
         background: #fff;
         transition: all .3s ease-in-out;
+        box-sizing: unset;
       }
 
 			&.draggable{
