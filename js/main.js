@@ -57,6 +57,16 @@ jQuery(function () {
   front.init();
 });
 
+document.addEventListener("DOMContentLoaded", function (event) {
+
+	let childrenItem = document.querySelectorAll('.menu-item-has-children');
+	for (let i = 0; i < childrenItem.length; i++) {
+			var btn = document.createElement("i");   // Create a <button> element
+			btn.className = "toggle-sub-menu icon icon-chevron";                    // add class
+			childrenItem[i].appendChild(btn);
+	}
+});
+
 $(document).ready(function() {
 	
 	// If the comparison slider is present on the page lets initialise it, this is good you will include this in the main js to prevent the code from running when not needed
