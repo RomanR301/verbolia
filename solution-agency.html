@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/precss.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Verbolia</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./img/main-logo.svg" alt="Verbolia logo">
+      </a>
+      <div class="navbar">
+        <ul class="menu">
+          <li class="menu-item menu-item-has-children">
+            <a href="#" class="menu__link">Solution</a>
+            <!-- <i class="toggle-sub-menu icon icon-chevron"></i> -->
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#" class="menu__link">For Agencies</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu__link">For SEO</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu__link">For SEA</a>
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="menu-item">
+            <a href="#" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>  -->
+          <!-- Hiding about us, but there will be an about us page later -->
+          <li class="menu-item">
+            <a href="#" class="menu__link">Blog</a>
+          </li>
+        </ul>
+        <div class="menu-item menu-item-has-children header-lang">
+          <i class="icon icon-globe"></i>
+          <!-- <i class="toggle-sub-menu icon icon-chevron"></i> -->
+          <ul class="sub-menu">
+            <li class="menu-item">
+              <a href="#" class="menu__link">EN</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu__link">FR</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="header-login menu__link">
+          LOG IN
+        </a>
+        <a href="#" class="header-contact btn btn-primary">
+          REQUEST A DEMO
+        </a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="solution-hero solution-agency">
+
+      <img src="./img/agency-hero-bg.svg" class="solution-hero-bg" alt="hero screen background image">
+      <img src="./img/agency-hero-bg-mobile.svg" class="solution-hero-bg-mobile" alt="hero screen background image">
+      <div class="container">
+        <div class="solution-hero__text">
+          <h1 class="heading-1">Scalable traffic acquisition for your ecommerce <span>customers</span></h1>
+          <p class="heading-5">Get rid of technical limitations and use Verbolia to deliver the strategy you have
+            defined</p>
+          <a href="#" class="btn btn-primary">Request a demo</a>
+        </div>
+        <div class="solution-hero__tabs tabs">
+          <div class="tabs-wrap">
+            <div class="tab-content active" id="tab-0">
+              <img src="./img/agency-tabs-image-1.jpg" alt="dashboard">
+            </div>
+            <div class="tab-content" id="tab-1">
+              <img src="./img/agency-tabs-image-1.jpg" alt="dashboard">
+            </div>
+            <div class="tab-content" id="tab-2">
+              <img src="./img/agency-tabs-image-1.jpg" alt="dashboard">
+            </div>
+          </div>
+
+          <ul class="tabs-list tabs-ul">
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-0','.tabs')" class="tabs-list__item_link tab-links active">
+                Get complete report</a>
+            </li>
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-1','.tabs')" class="tabs-list__item_link tab-links">Manage your
+                customers</a>
+            </li>
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-2','.tabs')" class="tabs-list__item_link tab-links">Create pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="clients container">
+      <h4 class="clients-heading">Trusted by</h4>
+      <div class="clients-list">
+        <img class="small-logo" src="./img/clients/clients-hema.png" alt="HEMA logo">
+        <img src="./img/clients/clients-decathlon.png" alt="DECATHLON logo">
+        <img src="./img/clients/clients-media-markt.png" alt="Media Markt logo">
+        <img src="./img/clients/clients-vdab.png" alt="VDAB logo">
+        <img src="./img/clients/clients-kazidomi.png" alt="Kazidomi logo">
+        <img src="./img/clients/clients-olx.png" alt="OLX Logo">
+      </div>
+    </section>
+    <section class="chat-box chat-box-agency">
+      <div class="container">
+        <h2 class="heading-2">You have defined a great SEO/SEA strategy
+          for your customer <span>but ...</span></h2>
+        <div class="chat-box-inner">
+          <img class="chat-box-background" src="./img/agency-chat-bg.svg" alt="background image">
+          <div class="chat-box-item">
+            <img src="./img/agency-chat-box-1.svg" alt="chat box">
+          </div>
+          <div class="chat-box-item">
+            <img src="./img/agency-chat-box-2.svg" alt="chat box">
+          </div>
+          <div class="chat-box-item">
+            <img src="./img/agency-chat-box-3.svg" alt="chat box">
+          </div>
+          <div class="chat-box-item">
+            <img src="./img/agency-chat-box-4.svg" alt="chat box">
+          </div>
+        </div>
+        <p class="heading-5">Use Verbolia on your client webshop to get control over the creation of optimized pages for
+          both SEO and Paid Search</p>
+      </div>
+    </section>
+    <section class="guide">
+      <img class="guide-bg" src="./img/agency-guide-bg.svg" alt="background-image">
+      <div class="container">
+        <h2 class="heading-2">How does it <span>work</span></h2>
+        <div class="guide-list">
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-1.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Extract a list of historically converting or high-potential keywords from your keywords research, Google
+              Ads or Google Analytics data.
+            </div>
+          </div>
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-2.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Integrate the perfect looking landing page template. A great opportunity to cross-sell for your design &
+              development team.
+            </div>
+          </div>
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-3.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Upload the keyword list to Verbolia and generate hundreds or even thousands of super-optimized landing
+              pages for each keyword variation, including relevant products that match the original search query.
+            </div>
+          </div>
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-4.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Benefit from perfect on-page optimization out of the box with matching URLs, &lttitle&gt tags, headings,
+              copy
+              and optimized images.
+            </div>
+          </div>
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-5.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Our smart linking algorithm automatically updates the internal linking to and between the landing pages to
+              make sure search engines crawl the pages that need it the most
+            </div>
+          </div>
+          <div class="guide__item">
+            <div class="guide__image">
+              <img src="./img/agency-guide-6.png" alt="how it works">
+            </div>
+            <div class="guide__text">
+              Use our integrated reporting suite to keep track of the performance of the different pages & keywords
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <h2 class="heading-2"><span>Frequently</span> asked questions</h2>
+        <div class="faq-list">
+          <div class="accordion-container">
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                Do my customers still need my SEO services?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>Any technology! The pages managed by Verbolia are independent from your technology. They are
+                  installed on the domain name of your website, but in a different folder from your ecommerce platform.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                How long does it take to implement Verbolia on my website?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>Typically the implementation takes between 4 and 8 weeks, depending on the complexity of the design
+                  and your reactivity. Once we start working with you, we assign a Customer Success Manager to lead the
+                  installation project with your team. He/she will make sure that everything goes smoothly.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                Can I use the Verbolia pages to improve my SEA campaigns?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>Typically the implementation takes between 4 and 8 weeks, depending on the complexity of the design
+                  and your reactivity. Once we start working with you, we assign a Customer Success Manager to lead the
+                  installation project with your team. He/she will make sure that everything goes smoothly.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                To whom belong the pages created by Verbolia?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>The pages belong to you, and the urls belong to you (as they are on your domain). However the
+                  technology used to generate them is property of Verbolia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                Where are the pages hosted?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>Verbolia pages are hosted in the cloud, on secure high performance servers. This is the best way to
+                  guarantee super high Pagespeed and give access to our algorithms to the application logs. That’s also
+                  why Verbolia is simple to set up and independent of your IT infrastructure and CMS.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                What happens if we stop working with Verbolia?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>If you decide to deactivate Verbolia, the pages will disappear. However, remember that the urls
+                  belong to you, so if you want to keep the ranking of the pages and keep getting traffic from them, we
+                  recommend that you create your own pages on these same urls or implement a redirection plan.</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a class="accordion__button" href="#">
+                Is there a risk of penalty?
+                <i class="accordion__arrow"></i>
+              </a>
+              <div class="accordion__content">
+                <p>Absolutely not, it’s even the opposite: the pages created by Verbolia provide to the visitors the
+                  very best experience, the fastest loading speed, carefully selected content and an internal linking
+                  architecture that will ease the crawling by the Search Engine bots. With this, you are even globally
+                  increasing the average SEO quality of your website.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="technologies container">
+      <div class="technologies-heading">
+        <h2 class="heading-2"><span>Compatible</span> with</h2>
+        <p class="heading-5">
+          Verbolia integrates with all the eCommerce platforms
+        </p>
+      </div>
+      <div class="technologies-list">
+        <div class="technologies__item">
+          <img src="./img/technologies/magento.png" alt="Magento">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/volusion.png" alt="Volusion">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/quick-eselling.png" alt="Quick eSelling">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/woo.png" alt="Woocommerce">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/shopify.png" alt="Shopify">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/opencart.png" alt="opencart">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/wix.png" alt="WIX">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/presta.png" alt="PrestaShop">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/oxatis.png" alt="NewOxatic">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/drupal.png" alt="Drupal">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/squarespace.png" alt="Squarespace">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/big-commerce.png" alt="Bigcommerce">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/pinnacle.png" alt="Pinnacle">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/joomla.png" alt="Joomla">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/virtue.png" alt="Virtue Mart">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/3dcart.png" alt="virtue">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/saphybris.png" alt="SAP Hybris">
+        </div>
+        <div class="technologies__item">
+          <img src="./img/technologies/salesfoece-cloud.png" alt="salesforce commerce cloud">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="./img/footer-decor-element.svg" class="footer-decor" alt="decor element">
+    <div class="container">
+      <div class="footer-logo-column">
+        <a class="footer-logo" href="#">
+          <img src="./img/main-logo.svg" alt="Verbolia logo">
+        </a>
+        <a class="linkedin-link" href="#">
+          <i class="icon icon-linkedin"></i>
+        </a>
+      </div>
+      <ul class="footer-menu-column">
+        <li class="menu-item">
+          <a href="#" class="menu__link">Solution</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Blog</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Pricing</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Privacy Policy</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu__link">Terms of Use</a>
+        </li>
+      </ul>
+      <div class="footer-subscribe-column">
+        <div class="subscribe-heading">Sign up for our newsletter</div>
+        <form action="">
+          <div class="form-group">
+            <input type="email" class="form-control" name="subscribe-email" placeholder="EMAIL" required>
+            <button type="submit" class="btn btn-outline">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

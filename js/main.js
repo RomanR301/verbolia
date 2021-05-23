@@ -11,6 +11,18 @@ let front = {
         $('header').removeClass("scroll-header");
       }
     });
+		$(".accordion__item .accordion__button").on("click", function(e) {
+			e.preventDefault();
+					if ($(this).parent().hasClass("active")) {
+					$(this).parent().removeClass("active");
+					$(this).parent().find(".accordion__content").slideUp(200);
+					} else {
+					$(".accordion__item").removeClass("active");
+					$(this).parent().addClass("active");
+					$(".accordion__content").slideUp(200);
+					$(this).parent().find(".accordion__content").slideDown(200);
+					}
+			});
       this.events();   
       
       $(document).on('click', '.toggle-sub-menu', function(e) {
@@ -41,6 +53,24 @@ let front = {
             this.body.removeClass('overflow');
         }
     },
+		openTab: function (element, tabName, parent) {
+      let i, tab_content, tab_links;
+
+      tab_content = $(element).closest(parent).find('.tab-content');
+
+      for (i = 0; i < tab_content.length; i++) {
+          tab_content[i].style.display = "none";
+      }
+
+      tab_links = $(element).closest('.tabs-ul').find('.tab-links');
+
+      for (i = 0; i < tab_links.length; i++) {
+          tab_links[i].className = tab_links[i].className.replace(" active", "");
+      }
+
+      document.getElementById(tabName).style.display = "block";
+      $(element).addClass('active');
+  },
   events: function () {
       let self = this;
       $(document).on('click', '.hamburger', function () {
@@ -87,7 +117,6 @@ $(document).ready(function() {
 		});
 	}
 });
-
 // This is where all the magic happens
 // This is a modified version of the pen from Ege Görgülü - https://codepen.io/bamf/pen/jEpxOX - and you should check it out too.
 function drags(dragElement, resizeElement, container) {
