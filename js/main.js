@@ -11,6 +11,16 @@ let front = {
         $('header').removeClass("scroll-header");
       }
     });
+		var swiper = new Swiper(".team-carousel", {
+			slidesPerView: 'auto',
+			spaceBetween: 40,
+			loop: true,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".btn-next",
+				prevEl: ".btn-prev",
+			},
+		});
 		$(".accordion__item .accordion__button").on("click", function(e) {
 			e.preventDefault();
 					if ($(this).parent().hasClass("active")) {
