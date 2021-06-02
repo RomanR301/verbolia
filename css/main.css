@@ -1500,6 +1500,8 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  max-width: 350px;
+  margin: auto;
 }
 
 .chat-box .heading-2 {
@@ -2780,6 +2782,223 @@ strong {
   transition: all .3s ease-in-out;
 }
 
+.jobs {
+  padding-top: 130px;
+  position: relative;
+}
+
+.jobs:before, .jobs:after {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+}
+
+.jobs:before {
+  left: 0;
+  top: 190px;
+  width: 96px;
+  height: 70px;
+  background-image: url("../img/jobs-decor1.svg");
+}
+
+.jobs:after {
+  top: 700px;
+  left: unset;
+  right: 0;
+  background-image: url("../img/jobs-decor2.svg");
+  width: 170px;
+  height: 44px;
+}
+
+.jobs-main {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+.jobs__heading {
+  color: #D55A5F;
+  font-weight: 800;
+  font-size: 44px;
+  margin: 54px 0 40px 0;
+}
+
+.jobs-content {
+  width: calc(62% - 12px);
+}
+
+.jobs-content h2 {
+  color: #D55A5F;
+  font-weight: 800;
+  font-size: 36px;
+  margin: 8px 0;
+}
+
+.jobs-content h3, .jobs-content h4 {
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #E37D38;
+}
+
+.jobs-content h3 {
+  font-size: 16px;
+}
+
+.jobs-content p {
+  margin-bottom: 24px;
+}
+
+.jobs-content ul {
+  margin-bottom: 32px;
+}
+
+.jobs-content ul li {
+  margin-bottom: 8px;
+}
+
+.jobs-content ul li:before {
+  border: 1px solid #e37d38;
+  background: #fff;
+  top: 7px;
+}
+
+.jobs-sidebar {
+  background: #FFFFFF;
+  border: 1px solid #EEAB34;
+  border-radius: 20px;
+  position: sticky;
+  top: 120px;
+  padding: 32px 24px;
+  width: calc(38% - 12px);
+}
+
+.jobs-sidebar .jobs-sidebar__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.jobs-sidebar .jobs-sidebar__heading p {
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E37D38;
+  margin-bottom: 6px;
+}
+
+.jobs-sidebar .jobs-sidebar__heading img {
+  width: 120px;
+  margin: 0;
+}
+
+.jobs-sidebar p {
+  font-size: 14px;
+}
+
+.jobs-sidebar ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.jobs-sidebar ul li:before {
+  top: 5px;
+}
+
+.jobs-form {
+  padding: 60px 0 100px 0;
+  background: #FEF3F4;
+}
+
+.jobs-form h2 {
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+}
+
+.thankyou-case:before {
+  display: none;
+}
+
+.thankyou-case:after {
+  background-image: url("../img/thankyou-case-decor2.svg");
+  top: 62%;
+}
+
+.thankyou-case .thankyou-box {
+  padding: 85px 150px;
+  border: 1px solid #5B5151;
+  border-radius: 16px;
+  max-width: 710px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: #F4F4EA;
+}
+
+.thankyou-case .thankyou-box:before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/thankyou-case-decor1.svg");
+  width: 240px;
+  height: 100px;
+  position: absolute;
+  right: -140px;
+  top: 30px;
+  z-index: 0;
+}
+
+.thankyou-case .thankyou-box:after {
+  content: '';
+  background: #F4F4EA;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 16px;
+}
+
+.thankyou-case .thankyou-box h1 {
+  font-weight: 800;
+  font-size: 44px;
+  margin-bottom: 24px;
+  line-height: 1.25;
+  z-index: 3;
+}
+
+.thankyou-case .thankyou-box p {
+  margin: 0 0 32px 0;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: .7;
+  z-index: 3;
+}
+
+.thankyou-case .thankyou-box img {
+  width: 280px;
+  margin: auto auto 40px auto;
+  z-index: 3;
+}
+
+.thankyou-case .thankyou-box .btn {
+  width: 100%;
+  z-index: 3;
+}
+
 @media (min-width: 1600px) {
   .case-detailed-background {
     height: 1050px;
@@ -3009,6 +3228,9 @@ strong {
 }
 
 @media (max-width: 1200px) {
+  .menu-item {
+    margin: 0 12px;
+  }
   .hero-screen {
     height: 70vh;
     padding: 100px 0 0 0;
@@ -3084,6 +3306,9 @@ strong {
   }
   .guide-sea .guide-bg {
     top: 120px;
+  }
+  .thankyou-case .thankyou-box {
+    max-width: 650px;
   }
 }
 
@@ -3685,6 +3910,91 @@ strong {
   .about-image {
     margin: 0px 0 0 -16px;
   }
+  .jobs {
+    padding-top: 86px;
+  }
+  .jobs:before {
+    top: 120px;
+  }
+  .jobs:after {
+    top: 70%;
+  }
+  .jobs-main {
+    flex-direction: column;
+  }
+  .jobs__heading {
+    font-size: 28px;
+    text-align: center;
+    margin: 35px 0 24px 0;
+  }
+  .jobs-content {
+    width: 100%;
+    margin-bottom: 57px;
+  }
+  .jobs-content h1, .jobs-content h2, .jobs-content h3, .jobs-content h4 {
+    text-align: center;
+    font-weight: 700;
+  }
+  .jobs-content h1 {
+    font-size: 22px;
+  }
+  .jobs-content h2 {
+    font-size: 18px;
+  }
+  .jobs-content h3 {
+    font-size: 14px;
+  }
+  .jobs-content h4 {
+    font-size: 11px;
+  }
+  .jobs-content p {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .jobs-content ul li {
+    font-size: 14px;
+  }
+  .jobs-content ul li:before {
+    top: 5px;
+  }
+  .jobs-sidebar {
+    padding: 24px 16px;
+    position: static;
+    width: 100%;
+  }
+  .jobs-sidebar p {
+    text-align: center;
+    margin: 0 0 16px 0;
+  }
+  .jobs-sidebar ul li:before {
+    top: 4px;
+  }
+  .jobs-form {
+    padding: 40px 0;
+  }
+  .jobs-form form {
+    margin: 0 -16px;
+    padding: 24px 16px;
+    background: #ffffff;
+  }
+  .jobs-form h2 {
+    margin: 0 -16px;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .thankyou-case {
+    padding: 115px 0 70px 0;
+    overflow-x: hidden;
+    height: auto;
+  }
+  .thankyou-case .thankyou-box {
+    max-width: 100%;
+  }
+  .thankyou-case .thankyou-box:before {
+    right: -60px;
+    top: 0px;
+    width: 130px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4068,6 +4378,21 @@ strong {
     top: unset;
     bottom: 17px;
     right: 24px;
+  }
+  .thankyou-case:after {
+    top: 85%;
+  }
+  .thankyou-case .thankyou-box {
+    padding: 56px 16px;
+  }
+  .thankyou-case .thankyou-box h1 {
+    font-size: 30px;
+  }
+  .thankyou-case .thankyou-box p {
+    font-size: 18px;
+  }
+  .thankyou-case .thankyou-box img {
+    width: 240px;
   }
 }
 
