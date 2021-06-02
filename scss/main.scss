@@ -307,6 +307,13 @@ strong {
     align-items: center;
     height: 100%;
   }
+  &-logo {
+    display: flex;
+    // width: 178px;
+    & img {
+      width: 178px;
+    }
+  }
   &-login {
     margin-left: 40px;
   }
@@ -1482,7 +1489,7 @@ strong {
     & p {
       opacity: .7;
       font-size: 20px;
-      font-weight: 600;
+      // font-weight: 600;
     }
     & h3 {
       font-weight: 700;
@@ -2704,6 +2711,9 @@ strong {
 }
 
 @media (max-width: 1600px) {
+  .menu-item {
+    margin: 0 16px;
+  }
   .hero-screen {
     height: 85vh;
   }
@@ -2722,6 +2732,7 @@ strong {
     }
   }
   .hero-screen__text .btn {
+    padding: 15px 33px;
     position: relative;
     &:after {
       content: "";
@@ -2730,10 +2741,10 @@ strong {
       height: 45px;
       background: $orangeColor;
       top: -1px;
-      left: -168px;
-      width: 100%;
+      left: -188px;
+      width: 150%;
       transition: all 0.3s ease-in-out;
-      z-index: 1;
+      z-index: -1;
     }
     &:hover {
       &:after {
@@ -2808,6 +2819,14 @@ strong {
 @media (max-width: 1400px) {
   .header-contact {
     margin-left: 40px;
+  }
+  .menu-item {
+    margin: 0 10px;
+  }
+  .header-logo {
+    & img {
+      width: 140px;
+    }
   }
   .container {
     max-width: 1100px;
@@ -2895,7 +2914,10 @@ strong {
 
 @media (max-width: 1200px) {
   .menu-item {
-    margin: 0 12px;
+    margin: 0 8px;
+  }
+  .menu__link {
+    font-size: 10px;
   }
   .hero-screen {
     height: 70vh;
@@ -3154,6 +3176,9 @@ strong {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .hero-screen__text .btn {
+    padding: 15px 33px;
   }
 
   .clients-list {
