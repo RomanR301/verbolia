@@ -2276,22 +2276,6 @@ strong {
   margin: 0 -12px 20px -12px;
 }
 
-.case-study-row-container {
-  position: relative;
-}
-
-.case-study-row-container:before {
-  content: "";
-  background: url("../img/case-studies-secondary-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  width: 100%;
-  height: 850px;
-  z-index: -1;
-  top: 200px;
-}
-
 .case-study-row .case-study__item {
   width: calc(33.333% - 24px);
   padding: 32px 24px;
