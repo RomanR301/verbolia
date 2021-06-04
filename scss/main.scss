@@ -2323,24 +2323,24 @@ strong {
     margin-bottom: 40px;
   }
   & .swiper-slide {
-    width: 10%;
+    width: 15vw;
   }
   & .swiper-wrapper {
     padding: 20px 0;
   }
   & .team-carousel {
-    width: 200%;
+    width: 110vw;
   }
   &-person {
     margin-bottom: 40px;
     &__avatar {
       width: 217px;
       height: 217px;
-      border-radius: 0 20px;
+      // border-radius: 20px;
       margin-bottom: 10px;
       & img {
         @include defaultIcon(cover);
-        border-radius: 0 20px;
+        border-radius: 20px;
       }
       position: relative;
       &:before {
@@ -2698,6 +2698,11 @@ strong {
   .solution-agency .solution-hero-bg {
     top: -85px;
   }
+  .team {
+    & .swiper-slide {
+      // width: 13vw;
+    }
+  }
 }
 @media (min-width: 2200px) {
   .case-study-featured-second {
@@ -2812,7 +2817,12 @@ strong {
   }
   .team {
     & .swiper-slide {
-      width: 9%;
+      // width: 9vw;
+    }
+    &-person {
+      &__position {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -2904,10 +2914,10 @@ strong {
   }
   .team {
     & .team-carousel {
-      width: 110%;
+      // width: 110%;
     }
     & .swiper-slide {
-      width: 21%;
+      width: 18vw;
     }
   }
 }
@@ -3000,6 +3010,11 @@ strong {
   .thankyou-case {
     & .thankyou-box {
       max-width: 650px;
+    }
+  }
+  .team {
+    & .swiper-slide {
+      width: 22vw;
     }
   }
 }

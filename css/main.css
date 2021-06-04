@@ -2655,7 +2655,7 @@ strong {
 }
 
 .team .swiper-slide {
-  width: 10%;
+  width: 15vw;
 }
 
 .team .swiper-wrapper {
@@ -2663,7 +2663,7 @@ strong {
 }
 
 .team .team-carousel {
-  width: 200%;
+  width: 110vw;
 }
 
 .team-person {
@@ -2673,7 +2673,6 @@ strong {
 .team-person__avatar {
   width: 217px;
   height: 217px;
-  border-radius: 0 20px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -2684,7 +2683,7 @@ strong {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0 20px;
+  border-radius: 20px;
 }
 
 .team-person__avatar:before {
@@ -3188,8 +3187,8 @@ strong {
   .about-bg {
     height: 100%;
   }
-  .team .swiper-slide {
-    width: 9%;
+  .team-person__position {
+    font-size: 14px;
   }
 }
 
@@ -3274,11 +3273,8 @@ strong {
   .tabs-wrap .tab-content {
     height: auto;
   }
-  .team .team-carousel {
-    width: 110%;
-  }
   .team .swiper-slide {
-    width: 21%;
+    width: 18vw;
   }
 }
 
@@ -3368,6 +3364,9 @@ strong {
   }
   .thankyou-case .thankyou-box {
     max-width: 650px;
+  }
+  .team .swiper-slide {
+    width: 22vw;
   }
 }
 

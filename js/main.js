@@ -14,6 +14,8 @@ let front = {
 		var swiper = new Swiper(".team-carousel", {
 			slidesPerView: 'auto',
 			spaceBetween: 40,
+			loopedSlides: 10,
+			loopAdditionalSlides: 10,
 			loop: true,
 			grabCursor: true,
 			navigation: {
