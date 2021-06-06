@@ -23,6 +23,16 @@ let front = {
 				prevEl: ".btn-prev",
 			},
 		});
+		var caseStudySlider = new Swiper(".case-studies-carousel", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".btn-next",
+				prevEl: ".btn-prev",
+			},
+		});
 		$(".accordion__item .accordion__button").on("click", function(e) {
 			e.preventDefault();
 					if ($(this).parent().hasClass("active")) {

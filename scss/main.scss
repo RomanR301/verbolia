@@ -731,7 +731,12 @@ strong {
     display: inline-block;
   }
 }
-
+.home-case-study {
+  margin-bottom: 88px;
+  .heading-2 {
+    margin-bottom: 40px;
+  }
+}
 .blog {
   margin-bottom: 95px;
   & .heading-2 {
@@ -2367,24 +2372,24 @@ strong {
       opacity: 0.7;
     }
   }
-  &-slider {
-    &__buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      & .slider-btn  {
-        background-image: url('../img/icons/icon-arrow.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 32px;
-        height: 32px;
-        margin: 0 36px;
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-        &.btn-prev {
-          transform: rotate(-180deg);
-        }
+}
+.slider {
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .slider-btn  {
+      background-image: url('../img/icons/icon-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 32px;
+      height: 32px;
+      margin: 0 36px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &.btn-prev {
+        transform: rotate(-180deg);
       }
     }
   }
@@ -2881,6 +2886,9 @@ strong {
   .how-it-works {
     height: 1200px;
   }
+  .home-case-study {
+    margin-top: -150px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -2994,9 +3002,10 @@ strong {
     &-heading {
       width: 67%;
     }
-    & .heading-1 {
-
-    }
+  }
+  .how-it-works {
+    height: 750px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1400px) {
@@ -3018,7 +3027,7 @@ strong {
     margin-bottom: 50px;
   }
   .how-it-works {
-    height: 600px;
+    height: 700px;
     &-background {
       object-fit: cover;
     }
@@ -3448,7 +3457,7 @@ strong {
   .how-it-works {
     height: auto;
     padding: 100px 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     align-items: flex-start;
     &-decor1 {
       display: none;
@@ -3469,6 +3478,9 @@ strong {
         display: none;
       }
     }
+  }
+  .home-case-study {
+    margin-bottom: 50px;
   }
   .blog {
     &-page {
@@ -4459,6 +4471,11 @@ strong {
     margin-bottom: 8px;
     .card__title {
       font-size: 18px;
+    }
+  }
+  .home-case-study {
+    .slider__buttons {
+      margin: 40px 0 0 0;
     }
   }
 }
