@@ -852,7 +852,7 @@ strong {
 .footer {
   background: #f4f4ea;
   position: relative;
-  padding: 56px 0 10px 0;
+  padding: 56px 0 30px 0;
   &-decor {
     position: absolute;
     right: 0;
@@ -2594,6 +2594,179 @@ strong {
       font-size: 40px;
       text-align: center;
     }
+    & form {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 40px 80px;
+      width: 810px;
+      margin: 40px auto 0 auto;
+    }
+    & .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+    & .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 16px;
+      margin-bottom: 32px;
+    }
+    .form-control {
+      width: 100%;
+      height: 45px;
+      font-family: inherit;
+      font-size: inherit;
+      border: 1px solid rgba(91, 81, 81, .2);
+      color: $defaultText;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      outline: none;
+      padding: 15px;
+      &::placeholder {
+        color: rgba(91, 81, 81, .5);
+        opacity: 1;
+      }
+      
+      &:-ms-input-placeholder {
+        color: rgba(91, 81, 81, .5);
+      }
+      
+      &::-ms-input-placeholder {
+        color: rgba(91, 81, 81, .5);
+      }
+    }
+    .form-submit {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+.upload {
+  position: relative;
+  display: block;
+  margin-bottom: 54px;
+  &-helper {
+    position: absolute;
+    font-size: 12px;
+    opacity: .7;
+    bottom: -20px;
+  }
+  &:before {
+    content: '';
+    background-image: url('../img/icons/icon-file.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  input[type=file] {
+    position: absolute;
+    top: 100%;
+    margin-top: -44px;
+    z-index: 1;
+    height: 44px;
+    width: 100%;
+    opacity: 0; 
+    &:not(.empty):valid + label:before {
+      background: #c16a2f;
+      border-color: #c16a2f;
+      content: attr(data-remove-text);
+    }
+    
+    &:invalid + label:after,
+    &.empty + label:after {
+      content: attr(data-drag-text);
+    }
+  }
+
+  label {
+    color: $defaultText;
+    margin: 0;
+    padding: 0 0 0 32px;
+    & span {
+      opacity: 0.7;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+    &:before, &:after {
+      display: block;
+      box-sizing: border-box;
+      text-overflow: ellipsis; 
+      overflow: hidden; 
+      white-space: nowrap;
+    }
+    &:before {
+      position: absolute;
+      right: 0;
+      font-family: inherit;
+      width: 190px;
+      height: 44px;
+      top: 100%;
+      z-index: 2;
+      margin-top: -44px;
+      line-height: 44px;
+      background: #FF9800;
+      color: #fff;
+      letter-spacing: 0.08em;
+      text-align: center;
+      content: attr(data-select-text);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      background: #E37D38;
+      border: 1px solid #E37D38;
+      border-radius: 26px;
+      transition: all .3s ease-in-out;
+    }
+    &:after {
+      margin-top: 8px;
+      width: 100%;
+      height: 45px;
+      font-family: inherit;
+      font-size: inherit;
+      border: 1px solid rgba(91, 81, 81, .2);
+      color: $defaultText;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      outline: none;
+      padding: 15px;
+      position: relative;
+      width: 95%;
+      content: attr(data-input-value);
+    }
+
+  }
+}
+.cover-letter {
+  input[type=file] {
+    &:not(.empty):valid + label:before {
+      background: #c16a2f;
+      border-color: #c16a2f;
+      color: $whiteColor;
+    }
+  }
+  & label {
+    &:before {
+      background: $whiteColor;
+      border: 1px solid #5B5151;
+      color: #5B5151;
+    }
+    // &:hover {
+    //   &:before {
+    //     background: #E37D38;
+    //     border-color: #E37D38;
+    //     color: $whiteColor;
+    //   }
+    // }
   }
 }
 .thankyou-case {
@@ -3914,7 +4087,7 @@ strong {
     &-form {
       padding: 40px 0;
       & form {
-        margin: 0 -16px;
+        width: 100%;
         padding: 24px 16px;
         background: $whiteColor;
       }
@@ -4476,6 +4649,93 @@ strong {
   .home-case-study {
     .slider__buttons {
       margin: 40px 0 0 0;
+    }
+  }
+  .jobs {
+    &-form {
+      .container {
+        padding: 0;
+      }
+      form {
+        border-radius: 0;
+        & .col-md-6 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+        .form-group {
+          margin-bottom: 24px;
+        }
+        .form-control {
+          border: 1px solid #5B5151;
+          border-radius: 24px;
+          padding: 15px 24px;
+          font-weight: 700;
+          &::placeholder {
+            color: rgba(91, 81, 81, .6);
+            opacity: 1;
+            font-weight: 700;
+          }
+          
+          &:-ms-input-placeholder {
+            color: rgba(91, 81, 81, .6);
+            font-weight: 700;
+          }
+          
+          &::-ms-input-placeholder {
+            color: rgba(91, 81, 81, .6);
+            font-weight: 700;
+          }
+        }
+        .upload {
+          margin-bottom: 44px;
+          height: 116px;
+          border: 1px dashed rgba(91, 81, 81, 0.2);
+          border-radius: 4px;
+          &:before {
+            left: 20px;
+            top: 20px;
+          }
+          & input {
+            height: 100%;
+            margin-top: 0;
+            top: 0;
+          }
+          & label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 0;
+            transform: translate(-50%, -50%);
+            color: #EEAB34;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            & span {
+              display: block;
+              margin-left: 0;
+            }
+            &:before {
+              display: none;  
+            }
+            &:after {
+              border: none;
+              width: 100%;
+              bottom: 0;
+              height: fit-content;
+              position: absolute;
+              margin: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

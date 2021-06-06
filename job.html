@@ -151,26 +151,36 @@
       <div class="container">
         <h2> Apply for this job</h2>
         <form action="">
-          <div class="form-group">
-            <input type="text" name="" id="" placeholder="First name">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="jobs-first-name" placeholder="FIRST NAME">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="jobs-last-name" placeholder="LAST NAME">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" class="form-control" name="jobs-email" placeholder="EMAIL">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="tel" class="form-control" name="jobs-phone" placeholder="PHONE">
+            </div>
           </div>
-          <div class="form-group">
-            <input type="text" name="" id="" placeholder="Last name">
+          <div class="upload">
+            <input id="upload" type="file" name="jobs-cv" accept=".doc,.pdf">
+            <label for="upload" data-input-value="" data-select-text="UPLOAD" data-remove-text="REMOVE FILE">
+               Resume/CV* <span>(1 uploaded files)</span>
+            </label>
+            <span class="upload-helper">Format: docx,pdf</span>
           </div>
-          <div class="form-group">
-            <input type="email" name="" id="" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <input type="tel" name="" id="" placeholder="Phone">
-          </div>
-          <div class="form-group form-file">
-            <input type="file" name="" id="">
-          </div>
-          <div class="form-group form-file">
-            <input type="file" name="" id="">
+          <div class="upload cover-letter">
+            <input id="upload2" type="file" name="jobs-cover-letter" accept=".doc,.pdf">
+            <label for="upload2" data-input-value="" data-select-text="BROWSE FILES" data-remove-text="REMOVE FILE">
+              Cover Letter <span>(1 uploaded files)</span>
+            </label>
+            <span class="upload-helper">Format: docx,pdf</span>
           </div>
           <div class="form-group form-submit">
-            <button type="submit">Submit</button>
+            <button class="btn btn-primary" type="submit">Submit</button>
           </div>
         </form>
       </div>
