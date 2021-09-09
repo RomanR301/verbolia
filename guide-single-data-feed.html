@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/precss.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Verbolia</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./img/main-logo.svg" alt="Verbolia logo" />
+        </a>
+        <div class="navbar">
+          <ul class="menu">
+            <li class="menu-item menu-item-has-children">
+              <a href="#" class="menu__link">Solution</a>
+              <!-- <i class="toggle-sub-menu icon icon-chevron"></i> -->
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="#" class="menu__link">For Agencies</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu__link">For SEO</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu__link">For SEA</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="menu-item">
+            <a href="#" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>  -->
+            <!-- Hiding about us, but there will be an about us page later -->
+            <li class="menu-item">
+              <a href="#" class="menu__link">Blog</a>
+            </li>
+          </ul>
+          <div class="menu-item menu-item-has-children header-lang">
+            <i class="icon icon-globe"></i>
+            <!-- <i class="toggle-sub-menu icon icon-chevron"></i> -->
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#" class="menu__link">EN</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu__link">FR</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="header-login menu__link"> LOG IN </a>
+          <a href="#" class="header-contact btn btn-primary"> REQUEST A DEMO </a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="guide-single">
+        <div class="container">
+          <div class="guide-sidebar">
+            <div class="guide-sidebar-menu__item guide-sidebar-title">
+              <a href="guide-single.html" class="guide-sidebar-menu__link"> Technical Integration Guide </a>
+              <button class="guide-sidebar-fiters-toggler">
+                <img src="./img/icon-filters.svg" alt="toggle filters icon" />
+              </button>
+            </div>
+            <ul class="guide-sidebar-menu">
+              <li class="guide-sidebar-menu__item active">
+                <a href="guide-single-data-feed.html" class="guide-sidebar-menu__link active">Data Feed Integration</a>
+                <i class="guide-sidebar-menu-button icon-chevron"></i>
+                <ul class="guide-sidebar-sub-menu open">
+                  <li class="sub-menu__item">
+                    <a href="#csv" data-scroll="csv" class="sub-menu__link">CSV</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#example1a" data-scroll="example1a" class="sub-menu__link">Example 1a</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#example1b" data-scroll="example1b" class="sub-menu__link">Example 1b</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#example2a" data-scroll="example2a" class="sub-menu__link">Example 2a</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#xml" data-scroll="xml" class="sub-menu__link">XML</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#json" data-scroll="json" class="sub-menu__link">Json</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="guide-sidebar-menu__item">
+                <a href="guide-single-reverse-proxy.html" class="guide-sidebar-menu__link">Reverse Proxy Redirection</a>
+              </li>
+              <li class="guide-sidebar-menu__item">
+                <a href="guide-single-internal-linking.html" class="guide-sidebar-menu__link">Internal Linking Configuration</a>
+              </li>
+            </ul>
+          </div>
+          <div class="guide-content">
+            <img src="./img/guide-single-decor.svg" alt="decor element" class="guide-single-content-decor" />
+            <div class="kama_breadcrumbs">
+              <span
+                ><a href="#"><span>Home</span></a></span
+              >
+              <span class="kb_sep"></span>
+              <span
+                ><a href="#"><span>User Guide</span></a></span
+              >
+              <span class="kb_sep"></span>
+              <span class="kb_title">Technical Integration Guide</span>
+            </div>
+            <div class="guide-content-inner">
+              <h1>Data Feed Integration</h1>
+              <p>
+                (An) up-to-date product/attribute/review feed(s) must be available in order to generate the most relevant, super-optimized landing pages. Verbolia accepts any type of format or connection: XML, JSON or CSV via FTP or API. Best is to
+                make the data feed urls easily accessible, meaning <strong>no authentication</strong> required.
+              </p>
+              <p>
+                The product feed with all <strong>general product information</strong> and attributes feed with <strong>extra product attribute details</strong> can be integrated in one and the same feed, if structured well (see next paragraph). A
+                reviews feed should be set-up separately, because of potential file size issues.
+              </p>
+              <p>If you want/need to use different feeds (for product data, extra attributes, reviews), make sure there’s a unique identifier (product id, ad id, etc.) available in every file to map the different feeds correctly with each other.</p>
+              <p>
+                The data feed(s) must contain all information needed to rebuild the design of the client’s search result pages. Meaning all product information, product attributes details, images, badges, dates,... the client shows on his search
+                results pages (in titles, descriptions, buttons, filters,...) needs to be structurally available in the feed(s) to make sure the Verbolia landing pages have exactly the same look-and-feel and behaviour as the client’s website.
+              </p>
+              <p>
+                Some basic fields are mandatory: product id, product title, product url, product image url, product price. The other fields are compulsory but could turn out to be mandatory when crosschecking the needs with the client’s search result
+                pages (mostly: group product id, product category, brand, color, size, extra product attributes, retail price, avg. product ratings,...).
+              </p>
+              <p>The Group Product ID is needed when you want to only show 1 single (grouped) product result (image/link) on the Verbolia pages iso. all the different colors, sizes, etc.</p>
+              <p>Below you can read and download several examples of clean data feeds, of different types and formats, which will give you more clarity on the needed information:</p>
+              <h2 id="csv" class="scrollspy">CSV</h2>
+              <ul>
+                <li>
+                  <span>Column separators can be comma , / TAB / semi-colon ; / pipe |</span> <em><strong> ‒ Default separator is comma ,</strong></em>
+                </li>
+                <li>
+                  <span> For attribute columns, delimiters can be comma , / semi-colon ; / pipe | </span><em><strong>‒ default attribute value delimiter is pipe |</strong></em>
+                </li>
+                <li>
+                  <span>For AttributeList columns, delimiters can be colon : / equals = / comma , / semi-colon ; / pipe |</span>
+                  <em><strong>‒ default attributetype:value delimiter is colon :</strong> </em>
+                  <em><strong>‒ default attributetype delimiter is semi-colon ;</strong></em>
+                  <em><strong>‒ default attribute value delimiter is pipe |</strong></em>
+                  <br />
+                  <strong><p>Default example:</p></strong>
+                  <pre>
+                    <code class="code javascript">
+attributetype1: value;
+attributetype2: value;
+attributetype3: value
+color: blue;
+size: small | medium | large;
+season: summer | spring
+                    </code>
+                  </pre>
+                  <div class="note"><p>!!! The chosen column separator must be different from the chosen (field) delimiters however !!!</p></div>
+                </li>
+                <li><span>Double quotes “” can be used to enclose values which could create conflicts with the above defaults (eg. SalePrice value is comma- delimited too, full text values with commas,...).</span></li>
+              </ul>
+              <h2 id="example1a" class="scrollspy">Example 1a:</h2>
+              <p>
+                1 line equals 1 product on level of color/price. GroupId available for grouping (if needed). When activated in the Verbolia app, the results (image/link) on the Verbolia pages will be shown on this level). Different attribute columns
+                (brand, category, sizes,...), values are pipe delimited. 1 column containing AttributeList per product (attribute types Color, ImageUrl, SalePrice,...), following the above default delimiters.
+              </p>
+              <h2 id="example1b" class="scrollspy">Example 1b:</h2>
+              <p>Same as 1a, only more attribute types are integrated into the AttributeList column (eg. size, season, badge,...).</p>
+              <h2 id="example2a" class="scrollspy">Example 2a:</h2>
+              <p>Same as 1a, only 1 line equals 1 product on level of color/price and size.</p>
+              <h2 id="xml" class="scrollspy">XML</h2>
+              <h2 id="json" class="scrollspy">Json</h2>
+              <div class="fyi">
+                <p>
+                  Uniquely productivate equity invested intellectual capital rather than integrated networks. Compellingly empower world-class networks without mission-critical e-markets. Enthusiastically facilitate low-risk high-yield e-tailers
+                  through user-centric leadership. Progressively leverage other's high-payoff bandwidth whereas go forward internal or "organic" sources. Credibly facilitate revolutionary platforms before diverse experiences.
+                </p>
+                <p>Enthusiastically architect parallel data after B2B core competencies. Objectively communicate an expanded array of vortals through revolutionary technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer class="footer">
+      <img src="./img/footer-decor-element.svg" class="footer-decor" alt="decor element" />
+      <div class="container">
+        <div class="footer-logo-column">
+          <a class="footer-logo" href="#">
+            <img src="./img/main-logo.svg" alt="Verbolia logo" />
+          </a>
+          <a class="linkedin-link" href="#">
+            <i class="icon icon-linkedin"></i>
+          </a>
+        </div>
+        <ul class="footer-menu-column">
+          <li class="menu-item">
+            <a href="#" class="menu__link">Solution</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Blog</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Pricing</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Privacy Policy</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu__link">Terms of Use</a>
+          </li>
+        </ul>
+        <div class="footer-subscribe-column">
+          <div class="subscribe-heading">Sign up for our newsletter</div>
+          <form action="">
+            <div class="form-group">
+              <input type="email" class="form-control" name="subscribe-email" placeholder="EMAIL" required />
+              <button type="submit" class="btn btn-outline">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/highlight.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
